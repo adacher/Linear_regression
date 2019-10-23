@@ -39,7 +39,7 @@ def check_user_input(user_input):
 
 
 def get_user_input():
-    user_input = input("Enter a km :\n")
+    user_input = input("Enter a mileage:\n")
     check_user_input(user_input)
     km = int(user_input)
     return km
