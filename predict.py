@@ -5,12 +5,16 @@ import csv
 
 def get_csv_km():
     km = []
-    with open('data.csv', 'rt') as csv_content:
-        data = csv.reader(csv_content, delimiter=',')
-        for row in data:
-            km.append(row[0])
-    km.pop(0)
-    km = list(map(float, km))
+    try:
+        with open('data.csv', 'rt') as csv_content:
+            data = csv.reader(csv_content, delimiter=',')
+            for row in data:
+                km.append(row[0])
+        km.pop(0)
+        km = list(map(float, km))
+    except:
+        print("Error: something went wrong.")
+        exit(1)
     return km
 
 
